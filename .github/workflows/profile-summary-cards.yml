@@ -2,7 +2,7 @@ name: GitHub-Profile-Summary-Cards
 
 on:
   schedule: # execute every month
-    - cron: '0 1 1 * *'
+    - cron: '0 2 1 * *'
   workflow_dispatch:
 
 jobs:
@@ -17,3 +17,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
+          UTC_OFFSET: 9
